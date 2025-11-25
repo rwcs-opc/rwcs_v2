@@ -1,0 +1,84 @@
+/* ----------------------------------------------------
+   Global Styles for RWCS (Modern Minimal – Style A)
+---------------------------------------------------- */
+
+/* Tailwind Base Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global font smoothing */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Headings refinement */
+h1, h2, h3, h4 {
+  letter-spacing: -0.5px;
+}
+
+/* Better container spacing */
+.container {
+  @apply mx-auto px-4 md:px-6;
+}
+
+/* Soft shadow reusable class */
+.soft-shadow {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Card style (consistent across pages) */
+.card {
+  @apply bg-white/70 backdrop-blur-md rounded-2xl shadow p-6;
+}
+
+/* Hover lift animation */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Simple fade-in animation */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Button styling (modern minimal) */
+.btn-primary {
+  @apply px-4 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition;
+}
+
+.btn-outline {
+  @apply px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition;
+}
+
+/* Form styling */
+input, textarea {
+  @apply w-full px-3 py-2 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-300 outline-none transition;
+}
+
+/* Remove image dragging ghost effect */
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+/* Footer subtle text */
+.footer-text {
+  @apply text-gray-500 text-sm tracking-wide;
+}
