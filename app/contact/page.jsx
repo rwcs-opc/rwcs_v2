@@ -62,7 +62,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-3 mb-3">
             <MdEmail className="text-red-500 text-xl" />
             <span className="text-slate-700">
-              admin@rwcs.in
+              contact@rwcs.in
             </span>
           </div>
 
